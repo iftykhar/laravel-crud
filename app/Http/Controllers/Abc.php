@@ -26,5 +26,7 @@ class Abc extends Controller
     public function add(){
         return view('backend.add');
     }
+
+    
     
 }
