@@ -31,9 +31,12 @@ class Product extends Controller
         $allproducts = ProductMode::all();
         return view('backend.pages.product.manage',compact('allproducts'));
     }
-    
+
     public function edit($id){
-        return view('backend.pages.product.edit');
+        // return view('backend.pages.product.edit');
+        $product = ProductMode::find($id);
+        return view('backend.pages.product.edit',compact('product'));
+
     }
 
     public function update(){
@@ -41,8 +44,21 @@ class Product extends Controller
     }
 
     public function delete($id){
-        $allproducts = ProductMode::find($id);
-        $allproducts->delete();
+        $product = ProductMode::find($id);
+        $product->delete();
         return back();
     }
+    public function active($id){
+        $product = ProductMode::find($id);
+        $product->status = '2';
+        $product->update();
+        return back();
+    }
+    public function inactive($id){
+        $product = ProductMode::find($id);
+        $product->status = '1';
+        $product->update();
+        return back();
+    }
+    
 }

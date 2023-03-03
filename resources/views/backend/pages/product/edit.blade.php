@@ -17,6 +17,7 @@
 <div class="container p-3">
     <!-- form table  -->
 
+    
 <div class="row">
     <div class="col-xl-9 mx-auto">
 		<h2> Edit Product </h2>
@@ -29,31 +30,32 @@
 						<div class="row mb-3">
 							<label for="name" class="col-sm-3 col-form-label">Product Name</label>
 							<div class="col-sm-9">
-								<input type="text" name="name" class="form-control" id="name" placeholder="Enter product Name">
+								<input type="text" name="name" value="{{ $product->name }}" class="form-control" id="name" >
 							</div>
 						</div>
 						<div class="row mb-3">
 							<label for="des" class="col-sm-3 col-form-label">Description</label>
 							<div class="col-sm-9">
-								<textarea class="form-control" name="des" id="des" rows="3" placeholder="Product Description"></textarea>
+								<textarea class="form-control" name="des" id="des" rows="3" value="{{ $product->des }}"></textarea>
 							</div>
 						</div>
 						<div class="row mb-3">
 							<label for="price" class="col-sm-3 col-form-label">Product Price</label>
 							<div class="col-sm-9">
-								<input type="text" name="price" class="form-control" id="price" placeholder=" product Price">
+								<input type="text" name="price" class="form-control" id="price" value="{{ $product->price }}">
 							</div>
 						</div>
 						<div class="row mb-3">
 							<label for="quantity" class="col-sm-3 col-form-label">Product Quantity</label>
 							<div class="col-sm-9">
-								<input type="text" name="quantity" class="form-control" id="quantity" placeholder=" product quantity">
+								<input type="text" name="quantity" class="form-control" id="quantity" value="{{ $product->quantity }}">
 							</div>
 						</div>
 						<div class="row mb-3">
 							<label for="status" class="col-sm-3 col-form-label"> Status</label>
 							<div class="col-sm-9">
 								<select name="status" class="form-control form-select" id="status">
+                                    
 									<option value="1">Active</option>
 									<option value="2">InActive</option>
 								</select>
@@ -62,7 +64,7 @@
 						<div class="row">
 							<label class="col-sm-3 col-form-label"></label>
 							<div class="col-sm-9">
-								<button type="submit" class="btn btn-info px-5">Create</button>
+								<button type="submit" class="btn btn-info px-5">Update</button>
 							</div>
 						</div>
 					</form>	

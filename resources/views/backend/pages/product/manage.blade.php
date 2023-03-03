@@ -42,10 +42,17 @@
                             <td>{{ $product->des }}</td>
                             <td>{{ $product->price }}</td>
                             <td>{{ $product->quantity }}</td>
-                            <td>{{ $product->status }}</td>
                             <td>
-                                <a href="{{ route('editproduct',$product->id) }}" class="btn btn-warning">Edit</a>
-                                <a href="{{ route('deleteproduct',$product->id) }}" class="btn btn-danger">Delete</a>
+                                @if($product->status == 1)
+                                    <a href="{{ route('activeproduct',$product->id) }}" class="btn btn-success btn-sm">Active</a>
+                                @else
+                                    <a href="{{ route('inactiveproduct',$product->id) }}" class="btn btn-info btn-sm">InActive</a>
+                                @endif
+
+                            </td>
+                            <td>
+                                <a href="{{ route('editproduct',$product->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="{{ route('deleteproduct',$product->id) }}" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
                         @endforeach
