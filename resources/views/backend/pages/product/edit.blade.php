@@ -37,7 +37,7 @@
 						<div class="row mb-3">
 							<label for="des" class="col-sm-3 col-form-label">Description</label>
 							<div class="col-sm-9">
-								<textarea class="form-control" name="des" id="des" rows="3" value="{{ $product->des }}"></textarea>
+								<textarea class="form-control" name="des" id="des" rows="3" >{{ $product->des }}</textarea>
 							</div>
 						</div>
 						<div class="row mb-3">

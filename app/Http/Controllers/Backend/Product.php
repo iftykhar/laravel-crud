@@ -28,8 +28,8 @@ class Product extends Controller
     }
 
     public function show(){
-        $allproducts = ProductMode::all();
-        return view('backend.pages.product.manage',compact('allproducts'));
+        $products = ProductMode::all();
+        return view('backend.pages.product.manage',compact('products'));
     }
 
     public function edit($id){
@@ -48,7 +48,8 @@ class Product extends Controller
         $product->quantity = $request->quantity;
         $product->status = $request->status;
         $product->save();
-        return back();
+        // return back();
+        return view('backend.pages.product.manage');
         //  dd($product);
     }
 

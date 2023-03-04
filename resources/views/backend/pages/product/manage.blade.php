@@ -32,7 +32,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($allproducts as $product)
+                        @foreach($products as $product)
                         
                         
                     
