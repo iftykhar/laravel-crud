@@ -24,7 +24,8 @@ class Product extends Controller
 
          $product->save();
         //  dd($product);
-        return view('backend.pages.product.manage');
+        // return view('backend.pages.product.manage');
+        return redirect()->route('showproduct');
     }
 
     public function show(){
@@ -49,7 +50,8 @@ class Product extends Controller
         $product->status = $request->status;
         $product->save();
         // return back();
-        return view('backend.pages.product.manage');
+        // return view('backend.pages.product.manage');
+        return redirect()->route('showproduct');
         //  dd($product);
     }
 
