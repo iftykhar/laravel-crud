@@ -25,8 +25,9 @@
 		<div class="card border-top border-0 border-4 border-info">
 			<div class="card-body">
 				<div class="border p-4 rounded">
-					<form action="{{ route('insertproduct')}}" method="POST">
+					<form action="{{ route('updateproduct',$product->id) }}" method="POST">
 						@csrf
+						@method('PUT')
 						<div class="row mb-3">
 							<label for="name" class="col-sm-3 col-form-label">Product Name</label>
 							<div class="col-sm-9">

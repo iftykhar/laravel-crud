@@ -39,8 +39,17 @@ class Product extends Controller
 
     }
 
-    public function update(){
-
+    public function update(Request $request,$id){
+        $product = ProductMode::find($id);
+        
+        $product->name = $request->name;
+        $product->des = $request->des;
+        $product->price = $request->price;
+        $product->quantity = $request->quantity;
+        $product->status = $request->status;
+        $product->save();
+        return back();
+        //  dd($product);
     }
 
     public function delete($id){
