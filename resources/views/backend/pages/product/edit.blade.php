@@ -57,8 +57,10 @@
 							<div class="col-sm-9">
 								<select name="status" class="form-control form-select" id="status">
                                     
-									<option value="1">Active</option>
-									<option value="2">InActive</option>
+									<!-- <option value="1" @if($product->status == '1' ) 'selectd' @endif >Active</option>
+									<option value="2" @if($product->status == '2' ) 'selectd' @endif >InActive</option> -->
+									<option value='1' @if ($product->status == '1') selected @endif>Active</option>
+                            		<option value='2' @if ($product->status == '2') selected @endif>InActive</option>
 								</select>
 							</div>
 						</div>

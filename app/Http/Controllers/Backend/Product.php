@@ -49,6 +49,7 @@ class Product extends Controller
         $product->quantity = $request->quantity;
         $product->status = $request->status;
         $product->save();
+        // $product->update();  //also works as save
         // return back();
         // return view('backend.pages.product.manage');
         return redirect()->route('showproduct');

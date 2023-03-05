@@ -32,21 +32,61 @@
 					</ul>
 				</li>
 				
-				<li class="menu-label">UI Elements</li>
 				<li>
-					<a href="{{ route('addproduct')}}">
-						<div class="parent-icon"><i class='bx bx-cookie'></i>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class='bx bx-home-circle'></i>
 						</div>
-						<div class="menu-title">Add product</div>
+						<div class="menu-title">Product</div>
 					</a>
+					<ul>
+						<li>
+							<a href="{{ route('addproduct')}}">
+								<div class="parent-icon"><i class='bx bx-cookie'></i>
+								</div>
+								<div class="menu-title">Add product</div>
+							</a>
+						
+						</li>
+						<li>
+							<a href="{{ route('showproduct')}}">
+								<div class="parent-icon"><i class='bx bx-cookie'></i>
+								</div>
+								<div class="menu-title">Show Product</div>
+							</a>
+						</li>
+					</ul>
+					
 				</li>
-				<li>
-					<a href="{{ route('showproduct')}}">
-						<div class="parent-icon"><i class='bx bx-cookie'></i>
-						</div>
-						<div class="menu-title">Show Product</div>
-					</a>
-				</li>
+				
+				<ul>
+						<li class="menu-label">UI Elements</li>
+							<li>
+						<a href="javascript:;" class="has-arrow">
+							<div class="parent-icon"><i class='bx bx-home-circle'></i>
+							</div>
+							<div class="menu-title">Category</div>
+						</a>
+						<ul>
+							<li>
+								<a href="{{ route('addcategory')}}">
+									<div class="parent-icon"><i class='bx bx-cookie'></i>
+									</div>
+									<div class="menu-title">Add category</div>
+								</a>
+							
+							</li>
+							<li>
+								<a href="{{ route('showproduct')}}">
+									<div class="parent-icon"><i class='bx bx-cookie'></i>
+									</div>
+									<div class="menu-title">Show Product</div>
+								</a>
+							</li>
+						</ul>
+						
+					</li>
+						
+				</ul>
 				<!--  -->
 			<!--end navigation-->
 		</div>

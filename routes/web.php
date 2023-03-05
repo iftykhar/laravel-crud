@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Abc;
 use App\Http\Controllers\Backend\Product;
+use App\Http\Controllers\Backend\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,7 @@ Route::put('updateproduct/{id}',[Product::class,'update',])->name('updateproduct
 Route::get('activeproduct/{id}',[Product::class,'active',])->name('activeproduct');
 Route::get('inactiveproduct/{id}',[Product::class,'inactive',])->name('inactiveproduct');
 
-
-
+// category routes 
+Route::get('addcategory',[CategoryController::class,'index'])->name('addcategory');
 
 
