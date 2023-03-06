@@ -35,5 +35,12 @@ Route::get('inactiveproduct/{id}',[Product::class,'inactive',])->name('inactivep
 
 // category routes 
 Route::get('addcategory',[CategoryController::class,'index'])->name('addcategory');
+Route::get('showcategory',[CategoryController::class,'show']);
+Route::post('insertcategory',[CategoryController::class,'store'])->name('insertcategory');
+Route::post('updatecategory/{id}',[CategoryController::class,'update']);
+Route::get('deletecategory/{id}',[CategoryController::class,'destroy']);
+Route::get('activecategory/{id}',[CategoryController::class,'active']);
+Route::get('inactivecategory/{id}',[CategoryController::class,'inactive']);
+Route::get('editcategory/{id}',[CategoryController::class,'edit']);
 
 

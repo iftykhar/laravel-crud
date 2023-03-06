@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('des');
             $table->string('status')->default('1')->comment('1 for active and 2 for inactive ');
             $table->timestamps();
         });

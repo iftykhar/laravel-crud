@@ -31,30 +31,8 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        @foreach($categories as $category)
-                        
-                        
-                    
-                        <tr>
-                            <td>{{ $category->id }}</td>
-                            <td>{{ $category->name }}</td>
-                            <td>{{ $category->des }}</td>
-                            <td>
-                                @if($category->status == 1)
-                                    <a href="{{ route('activeproduct',$category->id) }}" class="btn btn-success btn-sm">Active</a>
-                                @else
-                                    <a href="{{ route('inactiveproduct',$category->id) }}" class="btn btn-info btn-sm">InActive</a>
-                                @endif
-
-                            </td>
-                            <td>
-                                <a href="{{ route('editproduct',$category->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <button data-bs-toggle="modal" data-bs-target=""  class="btn btn-danger btn-sm">Delete</button data-bs-toggle="modal" data-bs-target="#">
-                            </td>
-                        </tr>
-                        
-                        @endforeach
+                    <tbody class="alldata">
+                      
                     </tbody>
                 </table>
                 
@@ -89,6 +67,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">close</button>
                                     <a type="button"  class="add-category btn btn-primary">Add</a>
+                                    <button type="button" style="display:none" class="update-category btn btn-primary">Update</button>
                                 </div>
 							</div>
 						</div>
@@ -97,5 +76,22 @@
         </div>
     </div>
 </div>
-    
+    <!-- For Delete Category Modal -->
+	<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Confirmation Message</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+                    Are you sure want to delete this item?
+                </div>
+                <div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<button id="m-cat-delete-btn" type="button" class="add-category btn btn-primary">Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 @endsection
